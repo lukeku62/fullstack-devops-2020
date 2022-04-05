@@ -1,11 +1,6 @@
-FROM alpine
-
-RUN apk update && apk add nodejs
+FROM node:current-alpine3.14
 
 COPY /app app/
 
-WORKDIR app/
+ENTRYPOINT ["node", "app/index.js"]
 
-ENTRYPOINT ["node", "index.js"]
-
-CMD [""]
