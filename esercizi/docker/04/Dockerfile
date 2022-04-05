@@ -1,9 +1,7 @@
-FROM alpine
-
-RUN apk update && apk add nodejs
+FROM node:current-alpine3.14
 
 COPY app/ /app
 
 WORKDIR /app
 
-CMD node index.js
+CMD ["node", "index.js"]
