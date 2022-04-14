@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
+<<<<<<< HEAD
 readonly USER_NAME="Luca Reverberi (lukeku62)"
 readonly USER_EMAIL="prevebbo@gmail.com"
+=======
+>>>>>>> remotes/bombo82/master
 
 install_and_configure_git() {
     echo "### Install and configure git"
