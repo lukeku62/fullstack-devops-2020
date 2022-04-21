@@ -6,8 +6,8 @@
   "homepage": "",
   "license": "GPL-3.0",
   "author": {
-    "name": "Gianni Bombelli (bombo82)",
-    "email": "bombo82@giannibombelli.it"
+    "name": "Luca Reverberi (lukeku62)",
+    "email": "prevebbo@gmail.com"
   },
   "contributors": [],
   "main": "dist/microservice-template/src/HttpServer.js",

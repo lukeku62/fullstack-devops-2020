@@ -19,3 +19,13 @@ services:
       - "traefik.http.routers.microservice-hextorgb.middlewares=microservice-hextorgb-stripprefix"
       - "traefik.http.services.microservice-hextorgb.loadbalancer.server.port=3000"
       - "traefik.http.middlewares.microservice-hextorgb-stripprefix.stripprefix.prefixes=/microservice-hextorgb"
+  
+  microservice-rgbtocmyk:
+    build: microservice-rgbtocmyk
+    restart: "no"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.microservice-rgbtocmyk.rule=PathPrefix(`/microservice-rgbtocmyk`)"
+      - "traefik.http.routers.microservice-rgbtocmyk.middlewares=microservice-rgbtocmyk-stripprefix"
+      - "traefik.http.services.microservice-rgbtocmyk.loadbalancer.server.port=3000"
+      - "traefik.http.middlewares.microservice-rgbtocmyk-stripprefix.stripprefix.prefixes=/microservice-rgbtocmyk"
