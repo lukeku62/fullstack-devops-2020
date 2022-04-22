@@ -1,6 +1,6 @@
 import {convert} from '../service/Service';
 import {Express} from 'express';
-import { HEX, HSL } from 'color-convert/conversions';
+import { HSL } from 'color-convert/conversions';
 
 type HSLType = {
     h: number,
@@ -11,10 +11,11 @@ type HSLType = {
 class HttpController {
     constructor(server: Express) {
         server.get('/', (req, res) => {
-            const color: HSL = JSON.parse(req.query.color as string);
-            const convertedColor: HEX = convert(color);
+            const inputcolor: HSLType =JSON.parse(req.query.color as string);
+            const color: HSL = [inputcolor.h, inputcolor.s, inputcolor.l];
+            const convertedColor: string = convert(color).toLowerCase();
 
-            res.send(convertedColor);
+            res.send({inputHSL:color, outputHEX:convertedColor});
         });
     }
 }
