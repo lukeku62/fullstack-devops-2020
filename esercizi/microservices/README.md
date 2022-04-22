@@ -11,21 +11,21 @@ Internet e utilizzato sia da pagine HTML che da applicazioni web.
 I microservizi sono
 - HEXTORGB: converte una stringa in formato esadecimale senza # in un array numerico con i 3 valori per R, G e B 
 ```bash
-$ curl "http://localhost/microservice-hextorgb/?color=ffffff"
+$ curl http://localhost/microservice-hextorgb/?color=ffffff
 ```
 
 - RGBTOCMYK: converte un oggetto {"r": , "g", "b"} in un array numerico con i 4 valori per C, M, Y, K
 ```bash
-curl "http://localhost/microservice-rgbtocmyk?color={"r":0,"g":255,"b":0}"
+$ curl http://localhost/microservice-rgbtocmyk?color={"r":0,"g":255,"b":0}
 ```
 
 - CMYKTOHSL: converte un oggetto {"c":, "m":, "y":, "k":} in un array numerico con i 3 valori per H, S, L
 ```bash
-$ curl "http://localhost/microservice-cmyktohsl?color={"c":0,"m":100,"y":0,"k":0}"
+$ curl http://localhost/microservice-cmyktohsl?color={"c":0,"m":100,"y":0,"k":0}
 ```
 - HSLTOHEX: converte un oggetto {"h":, "s":, "l":} in una stringa esadecimale numerica senza #
 ```bash
-$ curl "http://localhost/microservice-hsltohex?color={%22h%22:100,%22s%22:0,%22l%22:100}"
+$ curl http://localhost/microservice-hsltohex?color={%22h%22:100,%22s%22:0,%22l%22:100}
 ```
 
 ### Specifiche non funzionali per il prodotto
