@@ -10,7 +10,9 @@ Internet e utilizzato sia da pagine HTML che da applicazioni web.
 ## Specifiche
 I microservizi sono
 - HEXTORGB: converte una stringa in formato esadecimale senza # in un array numerico con i 3 valori per R, G e B 
+```bash
 curl "http://localhost/microservice-hextorgb/?color=ffffff"
+```
 
 - RGBTOCMYK: converte un oggetto {"r": , "g", "b"} in un array numerico con i 4 valori per C, M, Y, K
 curl "http://localhost/microservice-rgbtocmyk?color={"r":0,"g":255,"b":0}"
