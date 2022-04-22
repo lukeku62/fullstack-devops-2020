@@ -2,6 +2,12 @@ import {convert} from '../service/Service';
 import {Express} from 'express';
 import { HEX, HSL } from 'color-convert/conversions';
 
+type HSLType = {
+    h: number,
+    s: number,
+    l: number
+}
+
 class HttpController {
     constructor(server: Express) {
         server.get('/', (req, res) => {

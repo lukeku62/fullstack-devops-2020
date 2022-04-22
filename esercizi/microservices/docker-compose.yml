@@ -29,3 +29,13 @@ services:
       - "traefik.http.routers.microservice-rgbtocmyk.middlewares=microservice-rgbtocmyk-stripprefix"
       - "traefik.http.services.microservice-rgbtocmyk.loadbalancer.server.port=3000"
       - "traefik.http.middlewares.microservice-rgbtocmyk-stripprefix.stripprefix.prefixes=/microservice-rgbtocmyk"
+  
+  microservice-cmyktohsl:
+    build: microservice-cmyktohsl
+    restart: "no"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.microservice-cmyktohsl.rule=PathPrefix(`/microservice-cmyktohsl`)"
+      - "traefik.http.routers.microservice-cmyktohsl.middlewares=microservice-cmyktohsl-stripprefix"
+      - "traefik.http.services.microservice-cmyktohsl.loadbalancer.server.port=3000"
+      - "traefik.http.middlewares.microservice-cmyktohsl-stripprefix.stripprefix.prefixes=/microservice-cmyktohsl"
